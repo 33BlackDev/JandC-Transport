@@ -127,10 +127,12 @@ export default async function HomePage({ params }: Props) {
               <h3>{dict.services.nationalDelivery}</h3>
               <p>{dict.services.nationalDeliveryDesc}</p>
             </div>
-            <div className="service-card">
-              <div className="service-icon"><ClipboardCheck size={36} /></div>
-              <h3>{dict.services.customsManagement}</h3>
-              <p>{dict.services.doorToDoorDesc}</p>
+            <div className="bento-card col-span-4" style={{ flexDirection: 'row', alignItems: 'center', gap: '2rem' }}>
+              <div className="bento-icon" style={{ marginBottom: 0 }}><ClipboardCheck size={48} /></div>
+              <div>
+                <h3>{dict.services.customsManagement}</h3>
+                <p>{dict.services.doorToDoorDesc}</p>
+              </div>
             </div>
             <div className="bento-card col-span-4" style={{ flexDirection: 'row', alignItems: 'center', gap: '2rem' }}>
               <div className="bento-icon" style={{ marginBottom: 0 }}><Building2 size={48} /></div>
