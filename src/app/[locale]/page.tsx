@@ -115,12 +115,12 @@ export default async function HomePage({ params }: Props) {
             <div className="bento-card col-span-2">
               <div className="bento-icon"><Ship size={32} /></div>
               <h3>{dict.services.seaFreight}</h3>
-              <p>{dict.services.oceanFreightDesc}</p>
+              <p>{dict.services.seaFreightDesc}</p>
             </div>
             <div className="bento-card">
               <div className="bento-icon"><PackageOpen size={32} /></div>
               <h3>{dict.services.packageForwarding}</h3>
-              <p>{dict.services.customsClearanceDesc}</p>
+              <p>{dict.services.packageForwardingDesc}</p>
             </div>
             <div className="bento-card">
               <div className="bento-icon"><Truck size={32} /></div>
