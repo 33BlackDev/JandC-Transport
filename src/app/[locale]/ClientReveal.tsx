@@ -6,9 +6,10 @@ interface ClientRevealProps {
   className?: string;
   direction?: 'up' | 'left' | 'right';
   threshold?: number;
+  style?: React.CSSProperties;
 }
 
-export default function ClientReveal({ children, className = '', direction = 'up', threshold = 0.15 }: ClientRevealProps) {
+export default function ClientReveal({ children, className = '', direction = 'up', threshold = 0.15, style }: ClientRevealProps) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -41,7 +42,7 @@ export default function ClientReveal({ children, className = '', direction = 'up
   const dirClass = direction === 'up' ? 'reveal' : direction === 'left' ? 'reveal-left' : 'reveal-right';
 
   return (
-    <div ref={ref} className={`${dirClass} ${isVisible ? 'active' : ''} ${className}`}>
+    <div ref={ref} className={`${dirClass} ${isVisible ? 'active' : ''} ${className}`} style={style}>
       {children}
     </div>
   );
