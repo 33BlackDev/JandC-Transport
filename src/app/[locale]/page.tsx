@@ -131,7 +131,7 @@ export default async function HomePage({ params }: Props) {
               <div className="bento-icon" style={{ marginBottom: 0 }}><ClipboardCheck size={48} /></div>
               <div>
                 <h3>{dict.services.customsManagement}</h3>
-                <p>{dict.services.doorToDoorDesc}</p>
+                <p>{dict.services.customsManagementDesc}</p>
               </div>
             </div>
             <div className="bento-card col-span-4" style={{ flexDirection: 'row', alignItems: 'center', gap: '2rem' }}>
