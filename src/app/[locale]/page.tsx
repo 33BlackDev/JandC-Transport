@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Locale } from '@/i18n/config';
 import { getDictionary } from '@/i18n/getDictionary';
-import { Package, Search, Calculator, MapPin, Plane, Ship, PackageOpen, Truck, ClipboardCheck, Building2 } from 'lucide-react';
+import { Package, Search, Calculator, MapPin, Plane, Ship, PackageOpen, Truck, ClipboardCheck, Building2, Gift, Globe, FileText, ShieldCheck } from 'lucide-react';
 import Hero from '@/components/Hero';
 import StaggerReveal from './StaggerReveal';
 import FAQAccordion from '@/components/FAQAccordion';
@@ -24,6 +24,10 @@ export default async function HomePage({ params }: Props) {
     { question: dict.faq.q4, answer: dict.faq.a4 },
     { question: dict.faq.q5, answer: dict.faq.a5 },
     { question: dict.faq.q6, answer: dict.faq.a6 },
+    { question: dict.faq.q7, answer: dict.faq.a7 },
+    { question: dict.faq.q8, answer: dict.faq.a8 },
+    { question: dict.faq.q9, answer: dict.faq.a9 },
+    { question: dict.faq.q10, answer: dict.faq.a10 },
   ];
 
   const statsData = [
@@ -67,6 +71,15 @@ export default async function HomePage({ params }: Props) {
               <h3>{dict.quickActions.locations}</h3>
               <p>{dict.quickActions.locationsDesc}</p>
               <span className="quick-action-link" style={{ marginTop: 'auto', fontWeight: 'bold', color: 'var(--color-accent)' }}>{dict.quickActions.learnMore} →</span>
+            </Link>
+
+            <Link href={`/${locale}/rewards`} className="bento-card col-span-4 bento-card-horizontal">
+              <div className="bento-icon" style={{ marginBottom: 0 }}><Gift size={48} /></div>
+              <div>
+                <h3>{dict.quickActions.rewards}</h3>
+                <p>{dict.quickActions.rewardsDesc}</p>
+                <span className="quick-action-link" style={{ marginTop: 'var(--space-md)', fontWeight: 'bold', color: 'var(--color-accent)' }}>{dict.quickActions.learnMore} →</span>
+              </div>
             </Link>
           </StaggerReveal>
         </div>
@@ -140,6 +153,23 @@ export default async function HomePage({ params }: Props) {
                 <h3>{dict.services.businessSolutions}</h3>
                 <p>{dict.services.businessSolutionsDesc}</p>
               </div>
+            </div>
+            <div className="bento-card col-span-4 bento-card-horizontal">
+              <div className="bento-icon" style={{ marginBottom: 0 }}><Globe size={48} /></div>
+              <div>
+                <h3>{dict.services.europeanLocker}</h3>
+                <p>{dict.services.europeanLockerDesc}</p>
+              </div>
+            </div>
+            <div className="bento-card col-span-2">
+              <div className="bento-icon"><FileText size={32} /></div>
+              <h3>{dict.services.preAlerts}</h3>
+              <p>{dict.services.preAlertsDesc}</p>
+            </div>
+            <div className="bento-card col-span-2">
+              <div className="bento-icon"><ShieldCheck size={32} /></div>
+              <h3>{dict.services.consularServices}</h3>
+              <p>{dict.services.consularServicesDesc}</p>
             </div>
           </StaggerReveal>
         </div>
