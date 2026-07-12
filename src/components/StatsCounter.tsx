@@ -1,64 +1,74 @@
 'use client';
-import { useEffect, useState, useRef } from 'react';
+import { useRef } from 'react';
+import { gsap, useGSAP } from '@/components/GSAPProvider';
 
 interface StatsCounterProps {
   stats: Array<{ value: number; suffix: string; label: string; desc?: string }>;
 }
 
 export default function StatsCounter({ stats }: StatsCounterProps) {
-  const [counts, setCounts] = useState<number[]>(stats.map(() => 0));
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated) {
-          setHasAnimated(true);
-          stats.forEach((stat, index) => {
-            const duration = 2500;
-            const steps = 60;
-            const increment = stat.value / steps;
-            let current = 0;
-            
-            // Add a slight stagger delay based on index
-            setTimeout(() => {
-              const timer = setInterval(() => {
-                current += increment;
-                if (current >= stat.value) {
-                  current = stat.value;
-                  clearInterval(timer);
-                }
-                setCounts((prev) => {
-                  const newCounts = [...prev];
-                  newCounts[index] = Math.floor(current);
-                  return newCounts;
-                });
-              }, duration / steps);
-            }, index * 200); // 200ms stagger between each stat
-          });
+  useGSAP(() => {
+    if (!containerRef.current) return;
+
+    const cards = containerRef.current.querySelectorAll<HTMLDivElement>('.stat-card');
+
+    cards.forEach((card, index) => {
+      const numberEl = card.querySelector<HTMLElement>('.stat-number');
+      if (!numberEl) return;
+
+      const target = stats[index].value;
+      const suffix = stats[index].suffix;
+      const counter = { val: 0 };
+
+      gsap.to(counter, {
+        val: target,
+        duration: 2,
+        delay: index * 0.15,
+        ease: 'power2.out',
+        onUpdate() {
+          numberEl.textContent = `${Math.floor(counter.val).toLocaleString()}${suffix}`;
+        },
+        onComplete() {
+          numberEl.textContent = `${target.toLocaleString()}${suffix}`;
+        },
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+        },
+      });
+
+      // Stagger card entrance
+      gsap.fromTo(card,
+        { opacity: 0, y: 30, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.6,
+          delay: index * 0.12,
+          ease: 'back.out(1.4)',
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+          },
         }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [hasAnimated, stats]);
+      );
+    });
+  }, { scope: containerRef });
 
   return (
-    <div className="stats-grid" ref={ref}>
+    <div className="stats-grid" ref={containerRef}>
       {stats.map((stat, index) => (
-        <div 
-          key={index} 
-          className={`stat-card reveal ${hasAnimated ? 'active' : ''}`}
-          style={{ transitionDelay: `${index * 150}ms` }}
-        >
-          <div className="stat-number">
-            {counts[index].toLocaleString()}{stat.suffix}
+        <div key={index} className="stat-card">
+          <div className="stat-number" aria-label={`${stat.value.toLocaleString()}${stat.suffix} ${stat.label}`}>
+            0{stat.suffix}
           </div>
           <div className="stat-label">{stat.label}</div>
-          {stat.desc && <div className="stat-desc">{stat.desc}</div>}
+          {stat.desc && <div style={{ fontSize: '0.85rem', color: 'var(--color-gray-500)', marginTop: '0.25rem' }}>{stat.desc}</div>}
         </div>
       ))}
     </div>

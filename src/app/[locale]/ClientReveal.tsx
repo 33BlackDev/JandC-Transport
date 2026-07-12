@@ -1,5 +1,6 @@
 'use client';
-import { useEffect, useRef, useState, ReactNode } from 'react';
+import { useRef, ReactNode } from 'react';
+import { gsap, ScrollTrigger, useGSAP } from '@/components/GSAPProvider';
 
 interface ClientRevealProps {
   children: ReactNode;
@@ -9,40 +10,34 @@ interface ClientRevealProps {
   style?: React.CSSProperties;
 }
 
-export default function ClientReveal({ children, className = '', direction = 'up', threshold = 0.15, style }: ClientRevealProps) {
-  const [isVisible, setIsVisible] = useState(false);
+export default function ClientReveal({ children, className = '', direction = 'up', style }: ClientRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const currentRef = ref.current;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          // Optional: disconnect after first reveal
-          if (currentRef) {
-            observer.unobserve(currentRef);
-          }
-        }
+  useGSAP(() => {
+    if (!ref.current) return;
+
+    const toVars: gsap.TweenVars = {
+      opacity: 1,
+      duration: 0.6,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: ref.current,
+        start: 'top 88%',
+        toggleActions: 'play none none none',
       },
-      { threshold }
-    );
-
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
-
-    return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
     };
-  }, [threshold]);
 
-  const dirClass = direction === 'up' ? 'reveal' : direction === 'left' ? 'reveal-left' : 'reveal-right';
+    if (direction === 'up') {
+      gsap.fromTo(ref.current, { opacity: 0, y: 24 }, { ...toVars, y: 0 });
+    } else if (direction === 'left') {
+      gsap.fromTo(ref.current, { opacity: 0, x: -40 }, { ...toVars, x: 0 });
+    } else {
+      gsap.fromTo(ref.current, { opacity: 0, x: 40 }, { ...toVars, x: 0 });
+    }
+  }, { scope: ref });
 
   return (
-    <div ref={ref} className={`${dirClass} ${isVisible ? 'active' : ''} ${className}`} style={style}>
+    <div ref={ref} className={className} style={style}>
       {children}
     </div>
   );

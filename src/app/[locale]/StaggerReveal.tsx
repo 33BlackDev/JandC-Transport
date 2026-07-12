@@ -1,5 +1,6 @@
 'use client';
-import { useEffect, useRef, useState, ReactNode } from 'react';
+import { useRef, ReactNode } from 'react';
+import { gsap, useGSAP } from '@/components/GSAPProvider';
 
 interface StaggerRevealProps {
   children: ReactNode;
@@ -8,30 +9,39 @@ interface StaggerRevealProps {
   style?: React.CSSProperties;
 }
 
-export default function StaggerReveal({ children, className = '', threshold = 0.1, style }: StaggerRevealProps) {
-  const [isVisible, setIsVisible] = useState(false);
+export default function StaggerReveal({ children, className = '', style }: StaggerRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const currentRef = ref.current;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          if (currentRef) observer.unobserve(currentRef);
-        }
-      },
-      { threshold }
-    );
+  useGSAP(() => {
+    if (!ref.current) return;
 
-    if (currentRef) observer.observe(currentRef);
-    return () => {
-      if (currentRef) observer.unobserve(currentRef);
-    };
-  }, [threshold]);
+    const items = ref.current.children;
+    if (items.length === 0) return;
+
+    gsap.fromTo(
+      items,
+      { opacity: 0, y: 20, scale: 0.95 },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 0.5,
+        stagger: {
+          each: 0.06,
+          from: 'start',
+        },
+        ease: 'back.out(1.4)',
+        scrollTrigger: {
+          trigger: ref.current,
+          start: 'top 88%',
+          toggleActions: 'play none none none',
+        },
+      }
+    );
+  }, { scope: ref });
 
   return (
-    <div ref={ref} className={`${className} ${isVisible ? 'stagger-active' : 'stagger-hidden'}`} style={style}>
+    <div ref={ref} className={className} style={style}>
       {children}
     </div>
   );

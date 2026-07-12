@@ -9,6 +9,13 @@ import FAQAccordion from '@/components/FAQAccordion';
 import StatsCounter from '@/components/StatsCounter';
 import ClientReveal from './ClientReveal';
 
+// Arrow SVG to replace emoji arrows
+const ArrowRight = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ marginLeft: '0.4rem' }}>
+    <path d="M5 12h14M12 5l7 7-7 7" />
+  </svg>
+);
+
 type Props = {
   params: Promise<{ locale: string }>;
 };
@@ -41,133 +48,142 @@ export default async function HomePage({ params }: Props) {
     <>
       <Hero locale={locale as Locale} dict={dict} />
 
-      {/* Quick Actions - Symmetrical Grid */}
+      {/* Quick Actions — Bento Grid */}
       <section className="section" style={{ marginTop: '-80px', position: 'relative', zIndex: 10 }}>
         <div className="container">
           <StaggerReveal className="bento-grid">
-            <Link href={`/${locale}/services`} className="bento-card col-span-2 row-span-2">
-              <div className="bento-icon"><Package size={48} /></div>
+            <Link href={`/${locale}/services`} className="bento-card col-span-2 row-span-2" data-index="01">
+              <div className="bento-icon"><Package size={48} aria-hidden="true" /></div>
               <h3>{dict.quickActions.sendPackage}</h3>
               <p>{dict.quickActions.sendPackageDesc}</p>
-              <span className="quick-action-link" style={{ marginTop: 'auto', fontWeight: 'bold', color: 'var(--color-accent)' }}>{dict.quickActions.learnMore} →</span>
+              <span className="quick-action-link" style={{ marginTop: 'auto' }}>
+                {dict.quickActions.learnMore}<ArrowRight />
+              </span>
             </Link>
 
-            <Link href={`/${locale}/track`} className="bento-card col-span-2">
-              <div className="bento-icon"><Search size={32} /></div>
+            <Link href={`/${locale}/track`} className="bento-card col-span-2" data-index="02">
+              <div className="bento-icon"><Search size={32} aria-hidden="true" /></div>
               <h3>{dict.quickActions.trackPackage}</h3>
               <p>{dict.quickActions.trackPackageDesc}</p>
-              <span className="quick-action-link" style={{ marginTop: 'auto', fontWeight: 'bold', color: 'var(--color-accent)' }}>{dict.quickActions.learnMore} →</span>
+              <span className="quick-action-link" style={{ marginTop: 'auto' }}>
+                {dict.quickActions.learnMore}<ArrowRight />
+              </span>
             </Link>
 
-            <Link href={`/${locale}/calculator`} className="bento-card">
-              <div className="bento-icon"><Calculator size={32} /></div>
+            <Link href={`/${locale}/calculator`} className="bento-card" data-index="03">
+              <div className="bento-icon"><Calculator size={32} aria-hidden="true" /></div>
               <h3>{dict.quickActions.calculator}</h3>
               <p>{dict.quickActions.calculatorDesc}</p>
-              <span className="quick-action-link" style={{ marginTop: 'auto', fontWeight: 'bold', color: 'var(--color-accent)' }}>{dict.quickActions.learnMore} →</span>
+              <span className="quick-action-link" style={{ marginTop: 'auto' }}>
+                {dict.quickActions.learnMore}<ArrowRight />
+              </span>
             </Link>
 
-            <Link href={`/${locale}/locations`} className="bento-card">
-              <div className="bento-icon"><MapPin size={32} /></div>
+            <Link href={`/${locale}/locations`} className="bento-card" data-index="04">
+              <div className="bento-icon"><MapPin size={32} aria-hidden="true" /></div>
               <h3>{dict.quickActions.locations}</h3>
               <p>{dict.quickActions.locationsDesc}</p>
-              <span className="quick-action-link" style={{ marginTop: 'auto', fontWeight: 'bold', color: 'var(--color-accent)' }}>{dict.quickActions.learnMore} →</span>
+              <span className="quick-action-link" style={{ marginTop: 'auto' }}>
+                {dict.quickActions.learnMore}<ArrowRight />
+              </span>
             </Link>
 
-            <Link href={`/${locale}/rewards`} className="bento-card col-span-4 bento-card-horizontal">
-              <div className="bento-icon" style={{ marginBottom: 0 }}><Gift size={48} /></div>
+            <Link href={`/${locale}/rewards`} className="bento-card col-span-4 bento-card-horizontal" data-index="05">
+              <div className="bento-icon" style={{ marginBottom: 0 }}><Gift size={48} aria-hidden="true" /></div>
               <div>
                 <h3>{dict.quickActions.rewards}</h3>
                 <p>{dict.quickActions.rewardsDesc}</p>
-                <span className="quick-action-link" style={{ marginTop: 'var(--space-md)', fontWeight: 'bold', color: 'var(--color-accent)' }}>{dict.quickActions.learnMore} →</span>
+                <span className="quick-action-link" style={{ marginTop: 'var(--space-md)', display: 'inline-flex', alignItems: 'center' }}>
+                  {dict.quickActions.learnMore}<ArrowRight />
+                </span>
               </div>
             </Link>
           </StaggerReveal>
         </div>
       </section>
 
-      {/* Symmetrical Split Pane - Happy Customer */}
+      {/* Split Pane — About Story */}
       <section className="section section-dark">
-        <div className="bg-wave"></div>
         <div className="container">
           <ClientReveal className="split-pane">
             <div>
-              <h2 style={{ fontSize: '2.5rem', marginBottom: 'var(--space-md)' }}>
+              <h2 style={{ fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', marginBottom: 'var(--space-md)' }}>
                 {dict.about.subtitle}
               </h2>
-              <p style={{ fontSize: '1.15rem', color: 'var(--color-gray-400)', marginBottom: 'var(--space-xl)' }}>
+              <p style={{ fontSize: '1.1rem', color: 'var(--color-gray-400)', marginBottom: 'var(--space-xl)', lineHeight: '1.7' }}>
                 {dict.about.story}
               </p>
               <Link href={`/${locale}/about`} className="btn btn-primary">
-                {dict.quickActions.learnMore} →
+                {dict.quickActions.learnMore}<ArrowRight />
               </Link>
             </div>
-            <Image 
-              src="/images/happy-customer.png" 
-              alt="Happy Caribbean Customer" 
-              width={600} 
-              height={500} 
+            <Image
+              src="/images/happy-customer.png"
+              alt="Happy Caribbean Customer with J&C Transport"
+              width={600}
+              height={500}
               className="split-image"
             />
           </ClientReveal>
         </div>
       </section>
 
-      {/* Services Overview - Symmetrical Grid */}
+      {/* Services Overview — Bento Grid */}
       <section className="section">
         <div className="container">
           <ClientReveal className="section-header">
             <h2>{dict.services.title}</h2>
           </ClientReveal>
-          
+
           <StaggerReveal className="bento-grid">
-            <div className="bento-card col-span-2 row-span-2">
-              <div className="bento-icon"><Plane size={48} /></div>
+            <div className="bento-card col-span-2 row-span-2" data-index="01">
+              <div className="bento-icon"><Plane size={48} aria-hidden="true" /></div>
               <h3>{dict.services.airCargo}</h3>
               <p>{dict.services.airCargoDesc}</p>
             </div>
-            <div className="bento-card col-span-2">
-              <div className="bento-icon"><Ship size={32} /></div>
+            <div className="bento-card col-span-2" data-index="02">
+              <div className="bento-icon"><Ship size={32} aria-hidden="true" /></div>
               <h3>{dict.services.seaFreight}</h3>
               <p>{dict.services.seaFreightDesc}</p>
             </div>
-            <div className="bento-card">
-              <div className="bento-icon"><PackageOpen size={32} /></div>
+            <div className="bento-card" data-index="03">
+              <div className="bento-icon"><PackageOpen size={32} aria-hidden="true" /></div>
               <h3>{dict.services.packageForwarding}</h3>
               <p>{dict.services.packageForwardingDesc}</p>
             </div>
-            <div className="bento-card">
-              <div className="bento-icon"><Truck size={32} /></div>
+            <div className="bento-card" data-index="04">
+              <div className="bento-icon"><Truck size={32} aria-hidden="true" /></div>
               <h3>{dict.services.nationalDelivery}</h3>
               <p>{dict.services.nationalDeliveryDesc}</p>
             </div>
-            <div className="bento-card col-span-4 bento-card-horizontal">
-              <div className="bento-icon" style={{ marginBottom: 0 }}><ClipboardCheck size={48} /></div>
+            <div className="bento-card col-span-4 bento-card-horizontal" data-index="05">
+              <div className="bento-icon" style={{ marginBottom: 0 }}><ClipboardCheck size={48} aria-hidden="true" /></div>
               <div>
                 <h3>{dict.services.customsManagement}</h3>
                 <p>{dict.services.customsManagementDesc}</p>
               </div>
             </div>
-            <div className="bento-card col-span-4 bento-card-horizontal">
-              <div className="bento-icon" style={{ marginBottom: 0 }}><Building2 size={48} /></div>
+            <div className="bento-card col-span-4 bento-card-horizontal" data-index="06">
+              <div className="bento-icon" style={{ marginBottom: 0 }}><Building2 size={48} aria-hidden="true" /></div>
               <div>
                 <h3>{dict.services.businessSolutions}</h3>
                 <p>{dict.services.businessSolutionsDesc}</p>
               </div>
             </div>
-            <div className="bento-card col-span-4 bento-card-horizontal">
-              <div className="bento-icon" style={{ marginBottom: 0 }}><Globe size={48} /></div>
+            <div className="bento-card col-span-4 bento-card-horizontal" data-index="07">
+              <div className="bento-icon" style={{ marginBottom: 0 }}><Globe size={48} aria-hidden="true" /></div>
               <div>
                 <h3>{dict.services.europeanLocker}</h3>
                 <p>{dict.services.europeanLockerDesc}</p>
               </div>
             </div>
-            <div className="bento-card col-span-2">
-              <div className="bento-icon"><FileText size={32} /></div>
+            <div className="bento-card col-span-2" data-index="08">
+              <div className="bento-icon"><FileText size={32} aria-hidden="true" /></div>
               <h3>{dict.services.preAlerts}</h3>
               <p>{dict.services.preAlertsDesc}</p>
             </div>
-            <div className="bento-card col-span-2">
-              <div className="bento-icon"><ShieldCheck size={32} /></div>
+            <div className="bento-card col-span-2" data-index="09">
+              <div className="bento-icon"><ShieldCheck size={32} aria-hidden="true" /></div>
               <h3>{dict.services.consularServices}</h3>
               <p>{dict.services.consularServicesDesc}</p>
             </div>
@@ -178,19 +194,18 @@ export default async function HomePage({ params }: Props) {
       {/* Image Gallery */}
       <section className="section section-dark">
         <div className="container">
-           <ClientReveal className="section-header" style={{ marginBottom: 'var(--space-xl)' }}>
+          <ClientReveal className="section-header" style={{ marginBottom: 'var(--space-xl)' }}>
             <h2>Connecting The Caribbean</h2>
           </ClientReveal>
           <ClientReveal className="image-gallery">
-             <Image src="/images/coastal-delivery.png" alt="Coastal Delivery Van" width={600} height={400} className="gallery-img" />
-             <Image src="/images/miami-warehouse.png" alt="Miami Warehouse" width={600} height={400} className="gallery-img" />
+            <Image src="/images/coastal-delivery.png" alt="Coastal Delivery Van" width={600} height={400} className="gallery-img" />
+            <Image src="/images/miami-warehouse.png" alt="Miami Warehouse" width={600} height={400} className="gallery-img" />
           </ClientReveal>
         </div>
       </section>
 
       {/* Stats */}
-      <section className="section">
-        <div className="bg-wave" style={{ opacity: 0.1 }}></div>
+      <section className="section" style={{ position: 'relative' }}>
         <div className="container">
           <ClientReveal className="section-header">
             <h2>{dict.stats.title}</h2>
@@ -215,13 +230,21 @@ export default async function HomePage({ params }: Props) {
 
       {/* CTA */}
       <ClientReveal>
-        <section className="cta-section" style={{ backgroundImage: 'url(/images/sunset-port.png)', backgroundSize: 'cover', backgroundPosition: 'center', position: 'relative' }}>
-          <div style={{ position: 'absolute', inset: 0, background: 'rgba(10, 25, 47, 0.85)' }}></div>
+        <section
+          className="cta-section"
+          style={{
+            backgroundImage: 'url(/images/sunset-port.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            position: 'relative',
+          }}
+        >
+          <div style={{ position: 'absolute', inset: 0, background: 'rgba(10, 25, 47, 0.85)', borderRadius: 'inherit' }} aria-hidden="true" />
           <div className="container" style={{ position: 'relative', zIndex: 1 }}>
             <h2>{dict.cta.title}</h2>
-            <p style={{ color: 'rgba(255,255,255,0.8)' }}>{dict.cta.description}</p>
+            <p>{dict.cta.description}</p>
             <Link href={`/${locale}/contact`} className="btn btn-primary">
-              {dict.cta.button} →
+              {dict.cta.button}<ArrowRight />
             </Link>
           </div>
         </section>

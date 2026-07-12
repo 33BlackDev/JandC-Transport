@@ -1,15 +1,18 @@
 'use client';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Locale } from '@/i18n/config';
 import { MapPin } from 'lucide-react';
+import { gsap } from '@/components/GSAPProvider';
 
 interface LocationsClientProps {
   locale: Locale;
   dict: Record<string, Record<string, string>>;
 }
 
-export default function LocationsClient({ locale, dict }: LocationsClientProps) {
+export default function LocationsClient({ locale: _locale, dict }: LocationsClientProps) {
   const [activeTab, setActiveTab] = useState('usa');
+  const gridRef = useRef<HTMLDivElement>(null);
+  const isFirstRender = useRef(true);
 
   const locations = {
     usa: [
@@ -47,6 +50,28 @@ export default function LocationsClient({ locale, dict }: LocationsClientProps) 
     { key: 'dr', label: dict.locations.dr, flag: '🇩🇴' },
   ];
 
+  // Animate cards whenever tab changes
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+    if (!gridRef.current) return;
+
+    const cards = gridRef.current.querySelectorAll<HTMLElement>('.location-card');
+    gsap.from(cards, {
+      opacity: 0,
+      y: 20,
+      scale: 0.97,
+      duration: 0.4,
+      stagger: { each: 0.05, from: 'start' },
+      ease: 'back.out(1.4)',
+      clearProps: 'all',
+    });
+  }, [activeTab]);
+
+  const currentLocations = locations[activeTab as keyof typeof locations];
+
   return (
     <>
       <section className="page-hero">
@@ -58,31 +83,49 @@ export default function LocationsClient({ locale, dict }: LocationsClientProps) 
 
       <section className="section">
         <div className="container">
-          <div style={{ textAlign: 'center' }}>
-            <div className="locations-tabs">
+          {/* Scrollable tab bar */}
+          <div style={{ textAlign: 'center', overflowX: 'auto' }}>
+            <div className="locations-tabs" role="tablist" aria-label="Country tabs">
               {tabs.map((tab) => (
                 <button
                   key={tab.key}
+                  role="tab"
                   className={`location-tab ${activeTab === tab.key ? 'active' : ''}`}
                   onClick={() => setActiveTab(tab.key)}
+                  aria-selected={activeTab === tab.key}
+                  aria-controls={`tab-panel-${tab.key}`}
+                  id={`tab-${tab.key}`}
                 >
-                  {tab.flag} {tab.label}
+                  <span aria-hidden="true">{tab.flag}</span>
+                  {' '}{tab.label}
                 </button>
               ))}
             </div>
           </div>
 
-          <div className="locations-grid">
-            {locations[activeTab as keyof typeof locations].map((loc, index) => (
-              <div key={index} className="location-card">
-                <h3><MapPin size={24} /> {loc.name}</h3>
+          {/* Location cards */}
+          <div
+            ref={gridRef}
+            className="locations-grid"
+            role="tabpanel"
+            id={`tab-panel-${activeTab}`}
+            aria-labelledby={`tab-${activeTab}`}
+          >
+            {currentLocations.map((loc, index) => (
+              <div key={`${activeTab}-${index}`} className="location-card">
+                <h3>
+                  <MapPin size={20} aria-hidden="true" />
+                  {loc.name}
+                </h3>
                 <div className="location-detail">
                   <span className="label">{dict.locations.address}:</span>
                   <span>{loc.address}</span>
                 </div>
                 <div className="location-detail">
                   <span className="label">{dict.locations.phone}:</span>
-                  <span>{loc.phone}</span>
+                  <a href={`tel:${loc.phone.replace(/[^+\d]/g, '')}`} style={{ color: 'var(--color-accent-light)' }}>
+                    {loc.phone}
+                  </a>
                 </div>
                 <div className="location-detail">
                   <span className="label">{dict.locations.hours}:</span>
