@@ -43,9 +43,9 @@ export default async function ServicesPage({ params }: Props) {
               className="split-image"
             />
             <div>
-              <h2 style={{ fontSize: '2.5rem', marginBottom: 'var(--space-md)' }}>Global Freight Solutions</h2>
+              <h2 style={{ fontSize: '2.5rem', marginBottom: 'var(--space-md)' }}>{dict.services.globalFreightTitle}</h2>
               <p style={{ fontSize: '1.1rem', color: 'var(--color-gray-400)', marginBottom: 'var(--space-xl)' }}>
-                We provide highly reliable air and sea freight logistics connecting the United States directly to key Caribbean ports. Whether it is heavy cargo or express parcels, our network ensures safety and speed.
+                {dict.services.globalFreightDesc}
               </p>
               <Link href={`/${locale}/contact`} className="btn btn-primary">
                 {dict.common.contactUs} →
@@ -60,7 +60,7 @@ export default async function ServicesPage({ params }: Props) {
         <div className="bg-wave" style={{ opacity: 0.1 }}></div>
         <div className="container">
           <ClientReveal className="section-header">
-            <h2>Comprehensive Services</h2>
+            <h2>{dict.services.comprehensiveServices}</h2>
           </ClientReveal>
           <ClientReveal className="bento-grid">
             {services.map((service, index) => (
@@ -79,9 +79,9 @@ export default async function ServicesPage({ params }: Props) {
         <div className="container">
           <ClientReveal className="split-pane">
             <div>
-              <h2 style={{ fontSize: '2.5rem', marginBottom: 'var(--space-md)' }}>Local Last-Mile Delivery</h2>
+              <h2 style={{ fontSize: '2.5rem', marginBottom: 'var(--space-md)' }}>{dict.services.localDeliveryTitle}</h2>
               <p style={{ fontSize: '1.1rem', color: 'var(--color-gray-400)', marginBottom: 'var(--space-xl)' }}>
-                Our fleet of modern delivery vehicles ensures that your packages safely reach their final destination anywhere in Haiti and the Dominican Republic. Door-to-door convenience you can rely on.
+                {dict.services.localDeliveryDesc}
               </p>
             </div>
             <Image 

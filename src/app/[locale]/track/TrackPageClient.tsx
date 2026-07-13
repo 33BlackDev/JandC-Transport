@@ -66,18 +66,18 @@ export default function TrackPageClient({ locale, dict }: TrackPageClientProps) 
               <div className="bento-card col-span-2">
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: 'var(--space-xl)' }}>
                   <div className="status-pulse"></div>
-                  <h3 style={{ margin: 0, fontSize: '2.5rem' }}>IN TRANSIT</h3>
+                  <h3 style={{ margin: 0, fontSize: '2.5rem' }}>{dict.tracking?.inTransit || 'IN TRANSIT'}</h3>
                 </div>
                 <p style={{ fontSize: '1.1rem', color: 'var(--color-gray-400)', marginBottom: 'var(--space-2xl)' }}>
-                  Your package is currently navigating through customs clearance. All documentation has been verified.
+                  {dict.tracking?.transitDesc || 'Your package is currently navigating through customs clearance. All documentation has been verified.'}
                 </p>
                 <div style={{ display: 'flex', gap: 'var(--space-2xl)', marginTop: 'auto' }}>
                   <div>
-                    <span style={{ display: 'block', fontSize: '0.9rem', color: 'var(--color-gray-500)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Estimated Delivery</span>
-                    <span style={{ display: 'block', fontSize: '1.5rem', color: 'var(--color-white)', fontFamily: 'var(--font-heading)' }}>Jan 18, 2026</span>
+                    <span style={{ display: 'block', fontSize: '0.9rem', color: 'var(--color-gray-500)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{dict.tracking?.estimatedDelivery || 'Estimated Delivery'}</span>
+                    <span style={{ display: 'block', fontSize: '1.5rem', color: 'var(--color-white)', fontFamily: 'var(--font-heading)' }}>{dict.tracking?.jan18 || 'Jan 18, 2026'}</span>
                   </div>
                   <div>
-                    <span style={{ display: 'block', fontSize: '0.9rem', color: 'var(--color-gray-500)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Tracking ID</span>
+                    <span style={{ display: 'block', fontSize: '0.9rem', color: 'var(--color-gray-500)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{dict.tracking?.trackingId || 'Tracking ID'}</span>
                     <span style={{ display: 'block', fontSize: '1.5rem', color: 'var(--color-white)', fontFamily: 'var(--font-heading)' }}>{trackingNumber || 'JC-882910'}</span>
                   </div>
                 </div>
@@ -90,8 +90,8 @@ export default function TrackPageClient({ locale, dict }: TrackPageClientProps) 
                     <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-md)', width: '100%', background: 'rgba(17,24,39,0.6)', padding: '1rem', borderRadius: 'var(--radius-lg)', backdropFilter: 'blur(10px)' }}>
                       <MapPin size={24} color="var(--color-accent)" />
                       <div>
-                        <span style={{ display: 'block', fontSize: '0.8rem', color: 'var(--color-gray-300)' }}>Current Location</span>
-                        <span style={{ display: 'block', fontWeight: 'bold', color: 'var(--color-white)' }}>Port of Miami, FL</span>
+                        <span style={{ display: 'block', fontSize: '0.8rem', color: 'var(--color-gray-300)' }}>{dict.tracking?.currentLocation || 'Current Location'}</span>
+                        <span style={{ display: 'block', fontWeight: 'bold', color: 'var(--color-white)' }}>{dict.tracking?.mockLocation || 'Santo Domingo, DR'}</span>
                       </div>
                     </div>
                   </div>

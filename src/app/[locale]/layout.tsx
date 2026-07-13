@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { notFound } from 'next/navigation';
+import '../globals.css';
 import { locales, Locale } from '@/i18n/config';
 import { getDictionary } from '@/i18n/getDictionary';
 import Header from '@/components/Header';
@@ -43,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: dict.meta.title,
     description: dict.meta.description,
-    icons: { icon: '/images/logo.jpeg' },
+    icons: { icon: '/images/black-logo.png' },
   };
 }
 

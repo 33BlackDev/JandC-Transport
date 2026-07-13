@@ -39,12 +39,10 @@ export default function Header({ locale, dict }: HeaderProps) {
     return segments.join('/');
   };
 
-  const flags: Record<Locale, string> = { en: '🇺🇸', es: '🇩🇴', fr: '🇫🇷', ht: '🇭🇹' };
+  const flags: Record<Locale, string> = { en: '🇬🇧', es: '🇩🇴', fr: '🇫🇷', ht: '🇭🇹' };
 
   const navLinks = [
     { href: `/${locale}/services`, label: dict.nav.services },
-    { href: `/${locale}/track`, label: dict.nav.track },
-    { href: `/${locale}/calculator`, label: dict.nav.calculator },
     { href: `/${locale}/locations`, label: dict.nav.locations },
     { href: `/${locale}/about`, label: dict.nav.about },
     { href: `/${locale}/contact`, label: dict.nav.contact },
@@ -56,15 +54,15 @@ export default function Header({ locale, dict }: HeaderProps) {
         {/* Logo */}
         <Link href={`/${locale}`} className="header-logo" onClick={() => setMobileOpen(false)}>
           <Image
-            src="/images/logo.jpeg"
-            alt="J and C Transport"
+            src="/images/black-logo.png"
+            alt="JyC Servicios 777 S.R.L"
             width={160}
             height={160}
             quality={100}
             style={{ width: 'auto' }}
             priority
           />
-          <span>J and C Transport</span>
+          <span>JyC Servicios 777 S.R.L</span>
         </Link>
 
         {/* Desktop nav */}

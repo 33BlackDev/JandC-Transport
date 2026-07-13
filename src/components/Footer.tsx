@@ -9,7 +9,7 @@ interface FooterProps {
 
 const socialLinks = [
   {
-    href: 'https://www.facebook.com/jandctransport',
+    href: 'https://www.facebook.com/jycservicios777',
     label: 'Facebook',
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -18,7 +18,7 @@ const socialLinks = [
     ),
   },
   {
-    href: 'https://www.instagram.com/jandctransport',
+    href: 'https://www.instagram.com/jycservicios777',
     label: 'Instagram',
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -29,7 +29,7 @@ const socialLinks = [
     ),
   },
   {
-    href: 'https://wa.me/17863187029',
+    href: 'https://wa.me/18298567877',
     label: 'WhatsApp',
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -47,14 +47,14 @@ export default function Footer({ locale, dict }: FooterProps) {
           {/* Brand */}
           <div className="footer-brand">
             <Image
-              src="/images/logo.jpeg"
-              alt="J and C Transport"
+              src="/images/black-logo.png"
+              alt="JyC Servicios 777 S.R.L"
               width={48}
               height={48}
               style={{ borderRadius: '8px', marginBottom: '1rem', width: '48px', height: '48px', objectFit: 'contain' }}
             />
             <h3 style={{ color: 'var(--color-white)', fontSize: '1.3rem', marginBottom: '0.75rem' }}>
-              J and C Transport
+              JyC Servicios 777 S.R.L
             </h3>
             <p style={{ color: 'var(--color-gray-400)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '1rem' }}>
               {dict.meta.description}
@@ -89,18 +89,18 @@ export default function Footer({ locale, dict }: FooterProps) {
           {/* Contact */}
           <div className="footer-col">
             <h4>{dict.about.followUs}</h4>
-            <a href="mailto:info@jandctransport.com" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <a href="mailto:info@jycservicios777.com" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                 <polyline points="22,6 12,13 2,6"/>
               </svg>
-              info@jandctransport.com
+              info@jycservicios777.com
             </a>
-            <a href="tel:+17863187029" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.5rem' }}>
+            <a href="tel:+18298567877" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.5rem' }}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.23l3-.01a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.94-1.94a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
               </svg>
-              +1 (786) 318-7029
+              829-856-7877
             </a>
           </div>
         </div>

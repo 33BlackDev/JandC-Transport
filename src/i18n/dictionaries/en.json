@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "J and C Transport — Reliable Shipping to Haiti, DR & USA",
-    "description": "Fast and reliable package delivery between the United States, Dominican Republic, and Haiti. Air cargo, sea freight, and package forwarding services."
+    "title": "JyC Servicios 777 S.R.L — Reliable Shipping to Haiti, DR",
+    "description": "Fast and reliable package delivery between Dominican Republic, and Haiti. Air cargo, sea freight, and package forwarding services."
   },
   "nav": {
     "home": "Home",
@@ -17,30 +17,31 @@
   },
   "hero": {
     "title": "Ship With Confidence",
-    "subtitle": "Fast & reliable shipping between the USA, Dominican Republic, and Haiti",
+    "subtitle": "Fast & reliable shipping between the Dominican Republic, and Haiti",
     "description": "Whether you need to send packages to loved ones, ship commercial products, or forward online purchases — we deliver with care and speed.",
     "trackPlaceholder": "Enter your tracking number",
     "trackButton": "Track",
-    "getStarted": "Get Started"
+    "getStarted": "Get Started",
+    "connectingCaribbean": "Connecting The Caribbean"
   },
   "quickActions": {
     "sendPackage": "Send a Package",
-    "sendPackageDesc": "Ship packages safely between the USA, Haiti, and the Dominican Republic with our reliable service.",
+    "sendPackageDesc": "Ship packages safely between the Haiti, and the Dominican Republic with our reliable service.",
     "trackPackage": "Track a Package",
     "trackPackageDesc": "Enter your tracking number to know the exact current location and status of your package.",
     "calculator": "Shipping Calculator",
     "calculatorDesc": "Estimate shipping costs by entering your package dimensions, weight, and destination.",
-    "rewards": "J&C Rewards",
+    "rewards": "JyC Rewards",
     "rewardsDesc": "Earn points on every shipment and redeem them for free freight and exclusive discounts.",
     "locations": "Our Locations",
-    "locationsDesc": "Find our branch offices and pickup points in Haiti, Dominican Republic, and the USA.",
+    "locationsDesc": "Find our branch offices and pickup points in Haiti, Dominican Republic, and the.",
     "learnMore": "Learn more"
   },
   "services": {
     "title": "Our Services",
     "subtitle": "Comprehensive shipping solutions for all your needs",
     "airCargo": "Air Cargo",
-    "airCargoDesc": "Fast air freight service for time-sensitive packages. Door-to-door delivery between the USA, Haiti, and the Dominican Republic.",
+    "airCargoDesc": "Fast air freight service for time-sensitive packages. Door-to-door delivery between the Haiti, and the Dominican Republic.",
     "seaFreight": "Sea Freight",
     "seaFreightDesc": "Cost-effective ocean shipping for larger cargo and heavy items. Ideal for commercial shipments and bulk packages.",
     "packageForwarding": "Package Forwarding",
@@ -58,8 +59,8 @@
     "consularServices": "Consular Services",
     "consularServicesDesc": "Highly secure transit for passports, legal documents, and corporate mail.",
     "pageTitle": "Our Services",
-    "pageSubtitle": "Complete shipping and logistics solutions connecting the USA, Haiti, and the Dominican Republic",
-    "whyChoose": "Why Choose J and C Transport?",
+    "pageSubtitle": "Purchasing and freight shipping solutions , logistics connecting the USA ……",
+    "whyChoose": "Why Choose JyC Servicios 777 S.R.L?",
     "benefit1Title": "Fast Delivery",
     "benefit1Desc": "Express air cargo arrives in 3-5 business days. We prioritize speed without compromising safety.",
     "benefit2Title": "Secure Handling",
@@ -69,14 +70,19 @@
     "benefit4Title": "Door-to-Door",
     "benefit4Desc": "Complete pickup and delivery service. We bring your packages right to your doorstep.",
     "ctaTitle": "Ready to Ship?",
-    "ctaDesc": "Create an account today and start shipping with J and C Transport.",
-    "ctaButton": "Get Started"
+    "ctaDesc": "Create an account today and start shipping with JyC Servicios 777 S.R.L.",
+    "ctaButton": "Get Started",
+    "globalFreightTitle": "Global Freight Solutions",
+    "globalFreightDesc": "Make your long-distance wholesale purchases safely and transparently. We negotiate, buy, and also manage shipping from DR to Haiti.",
+    "comprehensiveServices": "Comprehensive Services",
+    "localDeliveryTitle": "Local Last-Mile Delivery",
+    "localDeliveryDesc": "Our fleet of modern delivery vehicles ensures that your packages safely reach their final destination anywhere in Haiti and the Dominican Republic. Door-to-door convenience you can rely on."
   },
   "howItWorks": {
     "title": "How It Works",
     "subtitle": "Shipping with us is simple",
     "step1Title": "Register",
-    "step1Desc": "Create your free account and get a personalized shipping address in the USA.",
+    "step1Desc": "Create your free account and get a personalized shipping address in the.",
     "step2Title": "Ship",
     "step2Desc": "Send your packages to our warehouse or use our address for online shopping.",
     "step3Title": "Receive",
@@ -84,7 +90,7 @@
   },
   "stats": {
     "title": "Trusted by Thousands",
-    "subtitle": "Delivering across the Caribbean and the United States",
+    "subtitle": "Delivering across the Caribbean",
     "packages": "Packages Delivered",
     "customers": "Satisfied Customers",
     "cities": "Cities Covered",
@@ -103,20 +109,20 @@
     "a4": "We accept cash, bank transfer, Zelle, Visa, and MasterCard. Payment can be made online or at any of our branch offices.",
     "q5": "Is my package insured?",
     "a5": "Your package is automatically insured for up to $100 in case of loss. Additional insurance can be purchased based on the declared value of your items.",
-    "q6": "Where does J and C Transport ship?",
-    "a6": "We ship between the United States, Haiti, and the Dominican Republic. We have branch offices in all three countries for your convenience.",
+    "q6": "Where does JyC Servicios 777 S.R.L ship?",
+    "a6": "We ship between Haiti, and the Dominican Republic. We have branch offices in all three countries for your convenience.",
     "q7": "How do I create an account?",
     "a7": "You can create a free personal or business account on our website. Just click 'Get Started' and fill in your information to receive your personalized shipping address.",
     "q8": "What items are prohibited from shipping?",
     "a8": "Prohibited items include hazardous materials, flammable substances, weapons, illegal drugs, and perishable goods without proper packaging. Contact us for a complete list.",
     "q9": "What is RUA and do I need it?",
     "a9": "For shipments to the Dominican Republic, customs requires a Registro Único Aduanero (RUA). We help you set this up.",
-    "q10": "How does J&C Rewards work?",
+    "q10": "How does JyC Rewards work?",
     "a10": "You earn points for every package you ship. These points can be redeemed for discounts or free shipments."
   },
   "cta": {
     "title": "Ready to Ship?",
-    "description": "Join thousands of satisfied customers who trust J and C Transport for their shipping needs.",
+    "description": "Join thousands of satisfied customers who trust JyC Servicios 777 S.R.L for their shipping needs.",
     "button": "Create Free Account"
   },
   "track": {
@@ -140,8 +146,8 @@
   },
   "locations": {
     "title": "Our Locations",
-    "subtitle": "Find our offices and pickup points across the United States, Haiti, and the Dominican Republic.",
-    "usa": "United States",
+    "subtitle": "Find our offices and pickup points across Haiti, and the Dominican Republic.",
+    "usa": "",
     "haiti": "Haiti",
     "dr": "Dominican Republic",
     "phone": "Phone",
@@ -155,16 +161,16 @@
     "orlandoAddr": "6700 Silver Star Rd, Suite 100B, Orlando, FL 32818",
     "orlandoHours": "Mon-Fri: 9:00 AM - 5:00 PM",
     "portauprince": "Port-au-Prince",
-    "portauprinceAddr": "4, Rue des Nimes, Delmas 31",
-    "portauprinceHours": "Mon-Sat: 8:00 AM - 5:00 PM",
+    "portauprinceAddr": "Delmas 95, impasse Eroy #7",
+    "portauprinceHours": "Monday - Friday\n8:00 AM - 6:00 PM\nSaturday - 9:00 AM - 2:00 PM\nSunday - Closed",
     "caphaitian": "Cap-Haïtien",
-    "caphaitianAddr": "98, Rue 20 A",
-    "caphaitianHours": "Mon-Sat: 8:00 AM - 5:00 PM",
+    "caphaitianAddr": "Rte de l'aéroport, a proximité du sous commisariat # 17",
+    "caphaitianHours": "Monday - Friday\n8:00 AM - 6:00 PM\nSaturday - 9:00 AM - 2:00 PM\nSunday - Closed",
     "santodomingo": "Santo Domingo",
-    "santodomingoAddr": "Plaza La Trinitaria, Calle No. 4",
+    "santodomingoAddr": "Santo Domingo este, la Ureña, calle 4, edificio 5",
     "santodomingoHours": "Mon-Sat: 8:00 AM - 6:00 PM",
     "santiago": "Santiago",
-    "santiagoAddr": "Calle del Sol, Centro Comercial",
+    "santiagoAddr": "Santiago de los Caballeros, Verona, edificio B",
     "santiagoHours": "Mon-Sat: 8:00 AM - 5:00 PM",
     "atlanta": "Atlanta",
     "atlantaAddr": "1600 Indian Brook Way, Norcross, GA 30093",
@@ -203,7 +209,7 @@
     "puntaCanaAddr": "Boulevard Turístico del Este",
     "puntaCanaHours": "Mon-Sat: 8:00 AM - 6:00 PM",
     "laRomana": "La Romana",
-    "laRomanaAddr": "Avenida Santa Rosa No. 12",
+    "laRomanaAddr": "Avenida Sant a Rosa No. 12",
     "laRomanaHours": "Mon-Sat: 8:00 AM - 6:00 PM",
     "puertoPlata": "Puerto Plata",
     "puertoPlataAddr": "Calle Beller No. 45",
@@ -232,28 +238,29 @@
     "volumetricWeight": "Volumetric Weight",
     "chargeableWeight": "Chargeable Weight",
     "selectCountry": "Select country",
-    "usa": "United States",
+    "usa": "",
     "haiti": "Haiti",
     "dr": "Dominican Republic",
     "disclaimer": "* This is an estimate. Final costs may vary based on actual package dimensions and customs fees."
   },
   "about": {
-    "title": "About J and C Transport",
+    "title": "About JyC Servicios 777 S.R.L",
     "subtitle": "Your trusted partner for Caribbean shipping",
-    "story": "Founded with a mission to connect families and businesses across the Caribbean, J and C Transport has grown to become a trusted name in international shipping. We specialize in reliable package delivery between the United States, Haiti, and the Dominican Republic.",
-    "mission": "Our Mission",
-    "missionText": "To provide fast, secure, and affordable shipping services that bridge the distance between the Caribbean and the United States, helping families stay connected and businesses grow.",
-    "vision": "Our Vision",
-    "visionText": "To be the leading shipping company in the Caribbean region, recognized for our reliability, innovation, and commitment to customer satisfaction.",
-    "values": "Our Values",
-    "value1": "Reliability",
-    "value1Desc": "We deliver on our promises. Every package is treated with care and arrives safely.",
-    "value2": "Transparency",
-    "value2Desc": "No hidden fees, no surprises. What we quote is what you pay.",
-    "value3": "Community",
-    "value3Desc": "We're more than a shipping company — we're a bridge that keeps communities connected.",
-    "value4": "Innovation",
-    "value4Desc": "We continuously improve our services with modern technology and efficient processes."
+    "story": "Make your wholesale purchases long-distance safely and without taboo. \nWe negotiate, buy, and also manage shipping from DR to Haiti. \n\nSend your packages to Cap-Haïtien and Port-au-Prince without inconvenience. \n\nAlso hauling and moving services \n\nSet no limits, with us there are no borders for your business purchases.",
+    "mission": "Mission",
+    "missionText": "To provide the client with a platform where they can buy and receive their products efficiently and quickly.",
+    "vision": "Vision",
+    "visionText": "To be a leading company in the search for the local and international market.",
+    "values": "Values",
+    "value1": "Transparency",
+    "value1Desc": "",
+    "value2": "Customer Focus",
+    "value2Desc": "",
+    "value3": "Honesty",
+    "value3Desc": "",
+    "value4": "Agility and efficiency",
+    "value4Desc": "",
+    "ourStoryTitle": "Broker"
   },
   "contact": {
     "title": "Contact Us",
@@ -273,7 +280,7 @@
     "officeHoursValue": "Monday - Saturday: 8:00 AM - 6:00 PM"
   },
   "footer": {
-    "description": "Fast and reliable shipping between the USA, Haiti, and the Dominican Republic. Your trusted Caribbean shipping partner.",
+    "description": "Fast and reliable shipping between the Haiti, and the Dominican Republic. Your trusted Caribbean shipping partner.",
     "quickLinks": "Quick Links",
     "services": "Services",
     "support": "Support",
@@ -281,7 +288,7 @@
     "privacyPolicy": "Privacy Policy",
     "followUs": "Follow Us",
     "rights": "All rights reserved.",
-    "copyright": "© 2025 J and C Transport"
+    "copyright": "© 2025 JyC Servicios 777 S.R.L"
   },
   "common": {
     "getStarted": "Get Started",
@@ -290,5 +297,14 @@
     "viewAll": "View All",
     "close": "Close",
     "loading": "Loading..."
+  },
+  "tracking": {
+    "inTransit": "IN TRANSIT",
+    "transitDesc": "Your package is currently navigating through customs clearance. All documentation has been verified.",
+    "estimatedDelivery": "Estimated Delivery",
+    "jan18": "Jan 18, 2026",
+    "trackingId": "Tracking ID",
+    "currentLocation": "Current Location",
+    "mockLocation": "Santo Domingo, DR"
   }
 }

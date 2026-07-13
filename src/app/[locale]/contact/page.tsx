@@ -40,7 +40,7 @@ export default async function ContactPage({ params }: Props) {
                 <div className="contact-info-icon"><Phone size={24} /></div>
                 <div>
                   <h4>{dict.contact.phoneLabel}</h4>
-                  <p>+1 (786) 318-7029</p>
+                  <p>829-856-7877</p>
                 </div>
               </div>
 
@@ -48,7 +48,7 @@ export default async function ContactPage({ params }: Props) {
                 <div className="contact-info-icon"><MessageSquare size={24} /></div>
                 <div>
                   <h4>{dict.contact.whatsapp}</h4>
-                  <a href="https://wa.me/17863187029">+1 (786) 318-7029</a>
+                  <a href="https://wa.me/18298567877">829-856-7877</a>
                 </div>
               </div>
 

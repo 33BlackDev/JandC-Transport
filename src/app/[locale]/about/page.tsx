@@ -41,8 +41,8 @@ export default async function AboutPage({ params }: Props) {
               className="split-image"
             />
             <div>
-              <h2 style={{ fontSize: '2.5rem', marginBottom: 'var(--space-md)' }}>Our Story</h2>
-              <p style={{ fontSize: '1.1rem', color: 'var(--color-gray-400)', lineHeight: 1.8, marginBottom: 'var(--space-xl)' }}>
+              <h2 style={{ fontSize: '2.5rem', marginBottom: 'var(--space-md)' }}>{dict.about.ourStoryTitle}</h2>
+              <p style={{ fontSize: '1.1rem', color: 'var(--color-gray-400)', lineHeight: 1.8, marginBottom: 'var(--space-xl)', whiteSpace: 'pre-line' }}>
                 {dict.about.story}
               </p>
               <div style={{ display: 'grid', gap: 'var(--space-xl)' }}>
@@ -74,7 +74,7 @@ export default async function AboutPage({ params }: Props) {
                 <div className="value-card-max-content">
                   <div className="bento-icon">{v.icon}</div>
                   <h3>{v.title}</h3>
-                  <p>{v.desc}</p>
+                  {v.desc && <p>{v.desc}</p>}
                 </div>
               </div>
             ))}

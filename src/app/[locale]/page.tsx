@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Locale } from '@/i18n/config';
 import { getDictionary } from '@/i18n/getDictionary';
-import { Package, Search, Calculator, MapPin, Plane, Ship, PackageOpen, Truck, ClipboardCheck, Building2, Gift, Globe, FileText, ShieldCheck } from 'lucide-react';
+import { Package, Search, MapPin, Plane, Ship, PackageOpen, Truck, ClipboardCheck, Building2, Gift, Globe, FileText, ShieldCheck } from 'lucide-react';
 import Hero from '@/components/Hero';
 import StaggerReveal from './StaggerReveal';
 import FAQAccordion from '@/components/FAQAccordion';
@@ -61,25 +61,8 @@ export default async function HomePage({ params }: Props) {
               </span>
             </Link>
 
-            <Link href={`/${locale}/track`} className="bento-card col-span-2" data-index="02">
-              <div className="bento-icon"><Search size={32} aria-hidden="true" /></div>
-              <h3>{dict.quickActions.trackPackage}</h3>
-              <p>{dict.quickActions.trackPackageDesc}</p>
-              <span className="quick-action-link" style={{ marginTop: 'auto' }}>
-                {dict.quickActions.learnMore}<ArrowRight />
-              </span>
-            </Link>
 
-            <Link href={`/${locale}/calculator`} className="bento-card" data-index="03">
-              <div className="bento-icon"><Calculator size={32} aria-hidden="true" /></div>
-              <h3>{dict.quickActions.calculator}</h3>
-              <p>{dict.quickActions.calculatorDesc}</p>
-              <span className="quick-action-link" style={{ marginTop: 'auto' }}>
-                {dict.quickActions.learnMore}<ArrowRight />
-              </span>
-            </Link>
-
-            <Link href={`/${locale}/locations`} className="bento-card" data-index="04">
+            <Link href={`/${locale}/locations`} className="bento-card" data-index="03">
               <div className="bento-icon"><MapPin size={32} aria-hidden="true" /></div>
               <h3>{dict.quickActions.locations}</h3>
               <p>{dict.quickActions.locationsDesc}</p>
@@ -119,7 +102,7 @@ export default async function HomePage({ params }: Props) {
             </div>
             <Image
               src="/images/happy-customer.png"
-              alt="Happy Caribbean Customer with J&C Transport"
+              alt="Happy Caribbean Customer with JyC Servicios 777 S.R.L"
               width={600}
               height={500}
               className="split-image"
@@ -195,7 +178,7 @@ export default async function HomePage({ params }: Props) {
       <section className="section section-dark">
         <div className="container">
           <ClientReveal className="section-header" style={{ marginBottom: 'var(--space-xl)' }}>
-            <h2>Connecting The Caribbean</h2>
+            <h2>{dict.hero.connectingCaribbean}</h2>
           </ClientReveal>
           <ClientReveal className="image-gallery">
             <Image src="/images/coastal-delivery.png" alt="Coastal Delivery Van" width={600} height={400} className="gallery-img" />
