@@ -13,7 +13,8 @@
     "contact": "Contact",
     "faq": "FAQ",
     "myAccount": "Mon Compte",
-    "language": "Langue"
+    "language": "Langue",
+    "portfolio": "Portfolio"
   },
   "hero": {
     "title": "Expédiez en Toute Confiance",
@@ -306,5 +307,9 @@
     "trackingId": "ID de Suivi",
     "currentLocation": "Emplacement Actuel",
     "mockLocation": "Saint-Domingue, RD"
+  },
+  "portfolio": {
+    "title": "Notre Portfolio",
+    "subtitle": "Un aperçu de notre expérience d'excellence dans chaque expédition et déménagement."
   }
 }

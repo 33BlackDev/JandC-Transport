@@ -1749,3 +1749,8 @@ a, button, [role="button"], .bento-card, .quick-action-card, .service-card, .loc
   background: rgba(217, 119, 6, 0.3);
   color: var(--color-white);
 }
+
+/* ===== PORTFOLIO ===== */
+.portfolio-item:hover {
+  transform: scale(1.02);
+}

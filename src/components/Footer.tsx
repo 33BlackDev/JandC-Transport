@@ -81,6 +81,7 @@ export default function Footer({ locale, dict }: FooterProps) {
           <div className="footer-col">
             <h4>{dict.nav.company}</h4>
             <Link href={`/${locale}/about`}>{dict.nav.about}</Link>
+            <Link href={`/${locale}/portfolio`}>{dict.nav.portfolio}</Link>
             <Link href={`/${locale}/contact`}>{dict.nav.contact}</Link>
             <Link href={`/${locale}/locations`}>{dict.nav.locations}</Link>
             <Link href={`/${locale}/faq`}>{dict.nav.faq}</Link>

@@ -13,7 +13,8 @@
     "contact": "Kontakte Nou",
     "faq": "Kesyon Souvan",
     "myAccount": "Kont Mwen",
-    "language": "Lang"
+    "language": "Lang",
+    "portfolio": "Pòtfolyo"
   },
   "hero": {
     "title": "Voye Ak Konfyans",
@@ -306,5 +307,9 @@
     "trackingId": "ID Suivi",
     "currentLocation": "Kote Kounye a",
     "mockLocation": "Santo Domingo, DR"
+  },
+  "portfolio": {
+    "title": "Pòtfolyo Nou An",
+    "subtitle": "Yon koutje sou eksperyans ekselans nou nan chak chajman ak demenajman."
   }
 }

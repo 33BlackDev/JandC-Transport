@@ -13,7 +13,8 @@
     "contact": "Contacto",
     "faq": "Preguntas Frecuentes",
     "myAccount": "Mi Cuenta",
-    "language": "Idioma"
+    "language": "Idioma",
+    "portfolio": "Portafolio"
   },
   "hero": {
     "title": "Envía Con Confianza",
@@ -306,5 +307,14 @@
     "trackingId": "ID de Rastreo",
     "currentLocation": "Ubicación Actual",
     "mockLocation": "Santo Domingo, DR"
+  },
+  "whatsapp": {
+    "title": "JyC Servicios 777 S.R.L",
+    "greeting": "¡Hola! ¿En qué podemos ayudarte?",
+    "openChat": "Abrir chat"
+  },
+  "portfolio": {
+    "title": "Nuestro Portafolio",
+    "subtitle": "Un vistazo a nuestra trayectoria de excelencia en cada envío y mudanza."
   }
 }

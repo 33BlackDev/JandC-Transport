@@ -71,16 +71,6 @@ export default async function HomePage({ params }: Props) {
               </span>
             </Link>
 
-            <Link href={`/${locale}/rewards`} className="bento-card col-span-4 bento-card-horizontal" data-index="05">
-              <div className="bento-icon" style={{ marginBottom: 0 }}><Gift size={48} aria-hidden="true" /></div>
-              <div>
-                <h3>{dict.quickActions.rewards}</h3>
-                <p>{dict.quickActions.rewardsDesc}</p>
-                <span className="quick-action-link" style={{ marginTop: 'var(--space-md)', display: 'inline-flex', alignItems: 'center' }}>
-                  {dict.quickActions.learnMore}<ArrowRight />
-                </span>
-              </div>
-            </Link>
           </StaggerReveal>
         </div>
       </section>
@@ -153,22 +143,10 @@ export default async function HomePage({ params }: Props) {
                 <p>{dict.services.businessSolutionsDesc}</p>
               </div>
             </div>
-            <div className="bento-card col-span-4 bento-card-horizontal" data-index="07">
-              <div className="bento-icon" style={{ marginBottom: 0 }}><Globe size={48} aria-hidden="true" /></div>
-              <div>
-                <h3>{dict.services.europeanLocker}</h3>
-                <p>{dict.services.europeanLockerDesc}</p>
-              </div>
-            </div>
             <div className="bento-card col-span-2" data-index="08">
               <div className="bento-icon"><FileText size={32} aria-hidden="true" /></div>
               <h3>{dict.services.preAlerts}</h3>
               <p>{dict.services.preAlertsDesc}</p>
-            </div>
-            <div className="bento-card col-span-2" data-index="09">
-              <div className="bento-icon"><ShieldCheck size={32} aria-hidden="true" /></div>
-              <h3>{dict.services.consularServices}</h3>
-              <p>{dict.services.consularServicesDesc}</p>
             </div>
           </StaggerReveal>
         </div>

@@ -13,7 +13,8 @@
     "contact": "Contact",
     "faq": "FAQ",
     "myAccount": "My Account",
-    "language": "Language"
+    "language": "Language",
+    "portfolio": "Portfolio"
   },
   "hero": {
     "title": "Ship With Confidence",
@@ -306,5 +307,14 @@
     "trackingId": "Tracking ID",
     "currentLocation": "Current Location",
     "mockLocation": "Santo Domingo, DR"
+  },
+  "whatsapp": {
+    "title": "JyC Servicios 777 S.R.L",
+    "greeting": "Hello! How can we help you?",
+    "openChat": "Open chat"
+  },
+  "portfolio": {
+    "title": "Our Portfolio",
+    "subtitle": "A glimpse into our track record of excellence in every shipment and move."
   }
 }
