@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "JyC Servicios 777 S.R.L — Reliable Shipping to Haiti, DR",
-    "description": "Fast and reliable package delivery between Dominican Republic, and Haiti. Air cargo, sea freight, and package forwarding services."
+    "description": "Fast and reliable package delivery between the Dominican Republic and Haiti. Air cargo, sea freight, and package forwarding services."
   },
   "nav": {
     "home": "Home",
@@ -18,7 +18,7 @@
   },
   "hero": {
     "title": "Ship With Confidence",
-    "subtitle": "Fast & reliable shipping between the Dominican Republic, and Haiti",
+    "subtitle": "Fast & reliable shipping between the Dominican Republic and Haiti",
     "description": "Whether you need to send packages to loved ones, ship commercial products, or forward online purchases — we deliver with care and speed.",
     "trackPlaceholder": "Enter your tracking number",
     "trackButton": "Track",
@@ -27,7 +27,7 @@
   },
   "quickActions": {
     "sendPackage": "Send a Package",
-    "sendPackageDesc": "Ship packages safely between the Haiti, and the Dominican Republic with our reliable service.",
+    "sendPackageDesc": "Ship packages safely between Haiti and the Dominican Republic with our reliable service.",
     "trackPackage": "Track a Package",
     "trackPackageDesc": "Enter your tracking number to know the exact current location and status of your package.",
     "calculator": "Shipping Calculator",
@@ -35,14 +35,14 @@
     "rewards": "JyC Rewards",
     "rewardsDesc": "Earn points on every shipment and redeem them for free freight and exclusive discounts.",
     "locations": "Our Locations",
-    "locationsDesc": "Find our branch offices and pickup points in Haiti, Dominican Republic, and the.",
+    "locationsDesc": "Find our branch offices and pickup points in Haiti, the Dominican Republic, and the USA.",
     "learnMore": "Learn more"
   },
   "services": {
     "title": "Our Services",
     "subtitle": "Comprehensive shipping solutions for all your needs",
     "airCargo": "Air Cargo",
-    "airCargoDesc": "Fast air freight service for time-sensitive packages. Door-to-door delivery between the Haiti, and the Dominican Republic.",
+    "airCargoDesc": "Fast air freight service for time-sensitive packages. Door-to-door delivery between Haiti and the Dominican Republic.",
     "seaFreight": "Sea Freight",
     "seaFreightDesc": "Cost-effective ocean shipping for larger cargo and heavy items. Ideal for commercial shipments and bulk packages.",
     "packageForwarding": "Package Forwarding",
@@ -60,7 +60,7 @@
     "consularServices": "Consular Services",
     "consularServicesDesc": "Highly secure transit for passports, legal documents, and corporate mail.",
     "pageTitle": "Our Services",
-    "pageSubtitle": "Purchasing and freight shipping solutions , logistics connecting the USA ……",
+    "pageSubtitle": "Purchasing and freight shipping solutions, logistics connecting the USA...",
     "whyChoose": "Why Choose JyC Servicios 777 S.R.L?",
     "benefit1Title": "Fast Delivery",
     "benefit1Desc": "Express air cargo arrives in 3-5 business days. We prioritize speed without compromising safety.",
@@ -83,7 +83,7 @@
     "title": "How It Works",
     "subtitle": "Shipping with us is simple",
     "step1Title": "Register",
-    "step1Desc": "Create your free account and get a personalized shipping address in the.",
+    "step1Desc": "Create your free account and get a personalized shipping address in the USA.",
     "step2Title": "Ship",
     "step2Desc": "Send your packages to our warehouse or use our address for online shopping.",
     "step3Title": "Receive",
@@ -111,7 +111,7 @@
     "q5": "Is my package insured?",
     "a5": "Your package is automatically insured for up to $100 in case of loss. Additional insurance can be purchased based on the declared value of your items.",
     "q6": "Where does JyC Servicios 777 S.R.L ship?",
-    "a6": "We ship between Haiti, and the Dominican Republic. We have branch offices in all three countries for your convenience.",
+    "a6": "We ship between Haiti and the Dominican Republic. We have branch offices in all three countries for your convenience.",
     "q7": "How do I create an account?",
     "a7": "You can create a free personal or business account on our website. Just click 'Get Started' and fill in your information to receive your personalized shipping address.",
     "q8": "What items are prohibited from shipping?",
@@ -147,8 +147,8 @@
   },
   "locations": {
     "title": "Our Locations",
-    "subtitle": "Find our offices and pickup points across Haiti, and the Dominican Republic.",
-    "usa": "",
+    "subtitle": "Find our offices and pickup points across Haiti and the Dominican Republic.",
+    "usa": "USA",
     "haiti": "Haiti",
     "dr": "Dominican Republic",
     "phone": "Phone",
@@ -239,7 +239,7 @@
     "volumetricWeight": "Volumetric Weight",
     "chargeableWeight": "Chargeable Weight",
     "selectCountry": "Select country",
-    "usa": "",
+    "usa": "USA",
     "haiti": "Haiti",
     "dr": "Dominican Republic",
     "disclaimer": "* This is an estimate. Final costs may vary based on actual package dimensions and customs fees."
